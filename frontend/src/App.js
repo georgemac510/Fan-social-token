@@ -7,7 +7,7 @@ import data from "./data.js"
 
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
-const CONTRACT_ADDRESS = "0xb801153bbffc079e65e5eaab203ebecc22a1ab91";
+const CONTRACT_ADDRESS = "0x9a09B11CdE86f4c871690B88eaa241c38310f77A";
 
 export default function App() {
 
@@ -86,7 +86,7 @@ export default function App() {
             console.log("Mining...please wait.")
             await nftTxn.wait();
             
-            console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+            console.log(`Mined, see transaction: https://kovan-optimistic.etherscan.io/address/${nftTxn.hash}`);
       
           } else {
             console.log("Ethereum object doesn't exist!");
@@ -118,7 +118,7 @@ export default function App() {
             console.log("Mining...please wait.")
             await nftTxn.wait();
             
-            console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+            console.log(`Mined, see transaction: https://kovan-optimistic.etherscan.io/address/${nftTxn.hash}`);
       
           } else {
             console.log("Ethereum object doesn't exist!");
@@ -150,7 +150,7 @@ export default function App() {
             console.log("Mining...please wait.")
             await nftTxn.wait();
             
-            console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+            console.log(`Mined, see transaction: https://kovan-optimistic.etherscan.io/address/${nftTxn.hash}`);
       
           } else {
             console.log("Ethereum object doesn't exist!");
@@ -182,7 +182,7 @@ export default function App() {
             console.log("Mining...please wait.")
             await nftTxn.wait();
             
-            console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+            console.log(`Mined, see transaction: https://kovan-optimistic.etherscan.io/address/${nftTxn.hash}`);
       
           } else {
             console.log("Ethereum object doesn't exist!");

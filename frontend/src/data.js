@@ -10,7 +10,7 @@ export default [
         title: "$POTIONS",
         DJ: "Potions",
         city: "New York, NY",
-        description: "$POTION token holders receive exclusive access to unreleased b2b sessions.",
+        description: "$POTIONS token holders receive exclusive access to unreleased b2b sessions.",
         image: "./images/potions.png"
     }
 ]
