@@ -12,6 +12,9 @@ This app used Truffle Polygon Box as its starting point and has the following re
 - Install ganache CLI:  `npm install -g ganache-cli`
 
 ## Setup prior to deploying contracts
+Install:
+    npm i @openzeppelin/contracts
+    npm i truffle-hdwallet-provider
 
 ### Setting up the env File
 
@@ -48,6 +51,12 @@ INFURA_PROJECT_ID="<Your Infura Project ID>"
 2. Migrate your contracts to the Mumbai Polygon testnet with `truffle migrate --config truffle-config.polygon.js --network=polygon_infura_testnet`
 3. You can check you contracts by checking the address on https://mumbai.polygonscan.com/
 4. Save this contract address for the minting process.
+
+## Migrating to Optimism-Kovan
+1. Install:
+        npm install @eth-optimism/solc@latest
+2. Migrate contract with:
+        truffle migrate --network optimism-kovan
 
 ## Installing and running frontend
 1. In project root, cd into the `frontend/hello-world` directory 
