@@ -20,6 +20,9 @@ Content creators may want to reward their most loyal fans with exclusive access 
 
  
 ## Setup prior to deploying contracts
+Install:
+ 1.   npm i @openzeppelin/contracts<br>
+ 2.   npm i @truffle-hdwallet-provider
 
 ### Setting up the env File
 
@@ -47,6 +50,12 @@ INFURA_PROJECT_ID="<Your Infura Project ID>"
 2. Migrate your contracts to the Rinkeby ETH testnet with `truffle migrate --network optimism-kovan`.
 3. You can check your contracts by copy and pasting the truffle contract address output into https://kovan-optimistic.etherscan.io/
 4. Save this contract address for the minting process.
+
+## Migrating to Optimism-Kovan
+1. Install:<br>
+        npm install @eth-optimism/solc@latest
+2. Migrate contract with:<br>
+        truffle migrate --network optimism-kovan
 
 ## Installing and running frontend
 1. In project root, cd into the `frontend` directory 

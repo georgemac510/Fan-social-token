@@ -678,7 +678,11 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
+<<<<<<< HEAD
   "updatedAt": "2022-03-20T23:29:37.987Z",
+=======
+  "updatedAt": "2022-03-20T23:24:16.266Z",
+>>>>>>> 37f5a2201bcbe82479f9d2d6baff2b3a35314fd8
   "devdoc": {
     "details": "Interface of the optional ERC1155MetadataExtension interface, as defined in the https://eips.ethereum.org/EIPS/eip-1155#metadata-extensions[EIP]. _Available since v3.1._",
     "kind": "dev",
@@ -714,6 +718,7 @@
     "kind": "user",
     "methods": {},
     "version": 1
+<<<<<<< HEAD
   },
   "db": {
     "callBytecode": {
@@ -725,5 +730,7 @@
     "contract": {
       "id": "0x7e93abdabfe1e1ee3a67cbf33b16bc4c175eecf80c90e7ad0465262e6abf2d5e"
     }
+=======
+>>>>>>> 37f5a2201bcbe82479f9d2d6baff2b3a35314fd8
   }
 }

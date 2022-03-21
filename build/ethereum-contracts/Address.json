@@ -7919,7 +7919,11 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
+<<<<<<< HEAD
   "updatedAt": "2022-03-20T23:29:37.988Z",
+=======
+  "updatedAt": "2022-03-20T23:24:16.266Z",
+>>>>>>> 37f5a2201bcbe82479f9d2d6baff2b3a35314fd8
   "devdoc": {
     "details": "Collection of functions related to the address type",
     "kind": "dev",
@@ -7930,6 +7934,7 @@
     "kind": "user",
     "methods": {},
     "version": 1
+<<<<<<< HEAD
   },
   "db": {
     "callBytecode": {
@@ -7941,5 +7946,7 @@
     "contract": {
       "id": "0xed30567de8004e444370da79fd74a73c8623b7885f57b95424804b3caa17e155"
     }
+=======
+>>>>>>> 37f5a2201bcbe82479f9d2d6baff2b3a35314fd8
   }
 }
