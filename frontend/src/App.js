@@ -7,7 +7,7 @@ import data from "./data.js"
 
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
-const CONTRACT_ADDRESS = "0x9a09B11CdE86f4c871690B88eaa241c38310f77A";
+const CONTRACT_ADDRESS = "0x8D516d2559Cf058685ea4bEB1eF069Fed3C7CB10";
 
 export default function App() {
 
@@ -113,7 +113,7 @@ export default function App() {
             const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myToken.abi, signer);
       
             console.log("Going to pop wallet now to pay gas...")
-            let nftTxn = await connectedContract.mint(1, 1);
+            let nftTxn = await connectedContract.mint(1, 1, {value: ethers.utils.parseEther("0.001")});
       
             console.log("Mining...please wait.")
             await nftTxn.wait();
@@ -145,7 +145,7 @@ export default function App() {
             const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myToken.abi, signer);
       
             console.log("Going to pop wallet now to pay gas...")
-            let nftTxn = await connectedContract.mint(2, 1);
+            let nftTxn = await connectedContract.mint(2, 1, {value: ethers.utils.parseEther("0.001")});
       
             console.log("Mining...please wait.")
             await nftTxn.wait();
@@ -177,7 +177,7 @@ export default function App() {
             const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myToken.abi, signer);
       
             console.log("Going to pop wallet now to pay gas...")
-            let nftTxn = await connectedContract.mint(3, 1);
+            let nftTxn = await connectedContract.mint(3, 1, {value: ethers.utils.parseEther("0.001")});
       
             console.log("Mining...please wait.")
             await nftTxn.wait();
