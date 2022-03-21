@@ -13,8 +13,8 @@ This app used Truffle Polygon Box as its starting point and has the following re
 
 ## Setup prior to deploying contracts
 Install:
-    npm i @openzeppelin/contracts
-    npm i truffle-hdwallet-provider
+ 1.   npm i @openzeppelin/contracts<br>
+ 2.   npm i truffle-hdwallet-provider
 
 ### Setting up the env File
 
@@ -53,9 +53,9 @@ INFURA_PROJECT_ID="<Your Infura Project ID>"
 4. Save this contract address for the minting process.
 
 ## Migrating to Optimism-Kovan
-1. Install:
+1. Install:<br>
         npm install @eth-optimism/solc@latest
-2. Migrate contract with:
+2. Migrate contract with:<br>
         truffle migrate --network optimism-kovan
 
 ## Installing and running frontend
