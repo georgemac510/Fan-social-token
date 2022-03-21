@@ -14,7 +14,7 @@ This app used Truffle Polygon Box as its starting point and has the following re
 ## Setup prior to deploying contracts
 Install:
  1.   npm i @openzeppelin/contracts<br>
- 2.   npm i truffle-hdwallet-provider
+ 2.   npm i @truffle-hdwallet-provider
 
 ### Setting up the env File
 
