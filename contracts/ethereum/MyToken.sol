@@ -3,9 +3,10 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract MyToken is ERC1155, Ownable {
-    uint price = 0.1 ether;
+    uint price;
     uint constant FAN = 0;
     uint constant OKO = 1;
     uint constant POTIONS = 2;
@@ -16,12 +17,13 @@ contract MyToken is ERC1155, Ownable {
         _mint(msg.sender, OKO, 100, "");
         _mint(msg.sender, POTIONS, 50, "");
         _mint(msg.sender, PLEX, 25, "");
+        price = 1000000000000000 wei; //0.001 ether
     }
 
-    // modifier verifyAmount(uint amount) {
-    //     require (msg.value >= amount * price);
-    //     _;
-    // }
+    modifier verifyAmount() {
+        require(msg.value >= price);
+        _;
+    }
 
     function setURI(string memory newuri) public onlyOwner {
         _setURI(newuri);
@@ -33,9 +35,8 @@ contract MyToken is ERC1155, Ownable {
     
     function mint(uint256 id, uint256 amount)
         public
-        payable 
+        payable verifyAmount
     {
-        // require(msg.value == price);
         _mint(msg.sender, id, amount, "");
     }
 
@@ -48,13 +49,23 @@ contract MyToken is ERC1155, Ownable {
 
     function withdraw() external onlyOwner {
         require(address(this).balance > 0, "Balance is 0");
-        (bool sent, bytes memory data) = owner().call{value: address(this).balance}("");
+        (bool sent, ) = owner().call{value: address(this).balance}("");
         require(sent, "Failed to send Ether");
     }
 
     function hello() public pure returns(string memory) {
         return "hello world";
     }
+
+    receive() external payable {}
+
+    fallback() external payable {}
+
+    function uri(uint256 _tokenId) override public pure returns (string memory) {
+        return string(abi.encodePacked(
+            "https://gateway.pinata.cloud/ipfs/QmWDK9MpzBTZjsyozFrftkkDj1hkPy3NE4RWr39DCm9f4Z/", Strings.toString(_tokenId), ".json"));
+    }
+
 }
 
 // Mumbai Polygon address: 0xaeCc8F00CB9f370e1D0BA8f4D8417F31c554A692
